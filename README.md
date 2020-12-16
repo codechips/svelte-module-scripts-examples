@@ -2,7 +2,7 @@
 
 > Learn everything about Svelte's module script blocks and how they work :nerd_face:
 
-Code example for my article [Svelte's context module explained](https://codechips.me/svelte-context-module-explained/).
+Code example for my article [Svelte's module scripts explained](https://codechips.me/svelte-module-scripts-explained/).
 
 ## How to run
 

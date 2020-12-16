@@ -1,29 +1,14 @@
-# New Project
+# svelte-module-scripts-examples
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+> Learn everything about Svelte's module script blocks and how they work :nerd_face:
 
-## Available Scripts
+Code example for my article [Svelte's context module explained](https://codechips.me/svelte-context-module-explained/).
 
-### npm start
+## How to run
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+Clone and run `npm i && npm start`
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+## There is more!
 
-### npm test
+For more interesting stuff like this follow me on [Twitter](https://twitter.com/codechips) or check out my blog at [codechips.me](https://codechips.me).
 
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
-
-### npm run build
-
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
-
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.json` config file.
-
-### Q: What about Eject?
-
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.

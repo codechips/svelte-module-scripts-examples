@@ -1,69 +1,70 @@
 <script>
-  import {onMount} from 'svelte';
-  let count = 0;
-  onMount(() => {
-    const interval = setInterval(() => count++, 1000);
-    return () => {
-      clearInterval(interval);
-    };
-  });
+  import { Route } from 'tinro';
+
+  import ReadonlyState from './pages/01-readonly-shared-state/index.svelte';
+  import ManipulatingState from './pages/02-manipulating-shared-state/index.svelte';
+  import ModuleExports from './pages/03-module-exports/index.svelte';
+  import { Index as JavascriptModules } from './pages/04-javascript-modules';
 </script>
 
 <style>
   :global(body) {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .App {
-    text-align: center;
-  }
-  .App code {
-    background: #0002;
-    padding: 4px 8px;
-    border-radius: 4px;
-  }
-  .App p {
-    margin: 0.4rem;
+    font-family: sans-serif;
+    color: #333;
+    background: #f3f3f3;
   }
 
-  .App-header {
-    background-color: #f9f6f6;
-    color: #333;
-    min-height: 100vh;
+  :global(pre) {
+    padding: 1rem;
+    background-color: #efefef;
+  }
+
+  :global(h3) {
+    margin: 0;
+    padding: 0 0 0.5rem;
+    border-bottom: 1px solid #999;
+  }
+
+  :global(.component) {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 2rem 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  :global(.flex) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-  }
-  .App-link {
-    color: #ff3e00;
-  }
-  .App-logo {
-    height: 36vmin;
-    pointer-events: none;
-    margin-bottom: 3rem;
-    animation: App-logo-pulse infinite 1.6s ease-in-out alternate;
-  }
-  @keyframes App-logo-pulse {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.06);
-    }
+    justify-content: space-between;
   }
 </style>
 
-<div class="App">
-  <header class="App-header">
-    <img src="/logo.svg" class="App-logo" alt="logo" />
-    <p>Edit <code>src/App.svelte</code> and save to reload.</p>
-    <p>Page has been open for <code>{count}</code> seconds.</p>
-    <p>
-      <a class="App-link" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">
-        Learn Svelte
-      </a>
-    </p>
-  </header>
+<div class="container">
+  <h1>Svelte Module Explained</h1>
+
+  <nav class="flex">
+    <a href="/01-readonly-shared-state">01: Readonly shared shared</a>
+    <a href="/02-manipulating-shared-state">02: Manipulating shared shared</a>
+    <a href="/03-module-exports">03: Module Exports</a>
+    <a href="/04-javascript-modules">04: Javascript Modules</a>
+  </nav>
+  <div>
+    <Route path="/">
+      <p>Svelte's `context="module"` explained by examples. Click on the links above.</p>
+    </Route>
+    <Route path="/01-readonly-shared-state">
+      <ReadonlyState />
+    </Route>
+    <Route path="/02-manipulating-shared-state">
+      <ManipulatingState />
+    </Route>
+    <Route path="/03-module-exports">
+      <ModuleExports />
+    </Route>
+    <Route path="/04-javascript-modules">
+      <JavascriptModules />
+    </Route>
+  </div>
 </div>

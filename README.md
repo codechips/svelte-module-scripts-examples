@@ -4,6 +4,8 @@
 
 Code example for my article [Svelte's module scripts explained](https://codechips.me/svelte-module-scripts-explained/).
 
+![svelte module script block](screenshot.png)
+
 ## How to run
 
 Clone and run `npm i && npm start`
